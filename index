@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" cgit commit -m "Adding the Iceland savings app"ontent="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iceland 2026: The $5,500 Mission</title>
     <style>
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0f172a; color: #f8fafc; text-align: center; padding: 20px; }
@@ -28,11 +28,11 @@
     <div id="countdown">Loading countdown...</div>
     
     <div class="total">$<span id="balance">0</span></div>
-    <div class="goal-text">Saved of our **$5,500** Goal</div>
+    <div class="goal-text">Saved of our $5,500 Goal</div>
 
     <div class="progress-bg">
         <div id="progress" class="progress-bar"></div>
-        <div id="prog-percent" class="progress-text">0%</div>
+        <div id="prog-percent" class="progress-text">0% Complete</div>
     </div>
 
     <div class="btn-group">
@@ -47,9 +47,9 @@
 
 <script>
     const goal = 5500;
+    // Load existing balance or start at 0
     let balance = localStorage.getItem('icelandBalance') ? parseFloat(localStorage.getItem('icelandBalance')) : 0;
 
-    // Countdown Logic
     function updateCountdown() {
         const tripDate = new Date("December 23, 2026 00:00:00").getTime();
         const now = new Date().getTime();
